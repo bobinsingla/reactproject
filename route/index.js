@@ -24,6 +24,7 @@ module.exports = function(app){
 					console.error(err.toString());
 				}else{
 					res.send(customerList);
+					//res.render({customerList});
 				}
 			})
 		})

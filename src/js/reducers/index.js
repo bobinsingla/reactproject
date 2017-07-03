@@ -1,9 +1,7 @@
 import { combineReducers } from "redux"
 
-import questions from "./tweetsReducer"
-import user from "./userReducer"
+import customers from "./customerReducer"
 
 export default combineReducers({
-  questions,
-  user,
+  customers,
 })
