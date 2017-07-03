@@ -17,7 +17,15 @@ module.exports = function(app){
 		app.use('/api/v1/', router);
 
 		router.get('/customer', function(req,res){
-			res.send(JSON.stringify());
+			//res.send(JSON.stringify());
+			controller.customer.viewCustomer({}, 0, 5, function(err, customerList){
+				console.log(customerList);
+				if(err){
+					console.error(err.toString());
+				}else{
+					res.send(customerList);
+				}
+			})
 		})
 
 		router.post('/customer', function(req, res){

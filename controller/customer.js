@@ -22,10 +22,18 @@ module.exports = function(app){
 
 	};			
 
+	var viewCustomer  = function(filter, skip, limit, callback){
+	    filter  = filter || {};
+      	limit   = limit  || 10;
+      	skip    = skip   || 0;
+
+      	customer.find(filter).limit(limit).skip(skip).exec(callback);
+	  }
 
 	return {
 		init: init,
-		createCustomer:createCustomer
+		createCustomer:createCustomer,
+		viewCustomer:viewCustomer
 	}
 
 };
