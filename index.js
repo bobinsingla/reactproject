@@ -15,4 +15,6 @@ model(app).init();
 controller(app).init();
 routes(app).init();
 
-app.listen(8000);
+var PORT = process.env.PORT || 8000;
+
+app.listen(PORT);

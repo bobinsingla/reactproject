@@ -37,3 +37,23 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
   ],
 };
+
+/*module.exports = {
+  context: path.join(__dirname, ""),
+  devtool: debug ? "inline-sourcemap" : null,
+  entry: "./index.js",
+  target:'node',
+  externals: [nodeExternals()],
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/, 
+      }
+    ]
+  },
+  output: {
+    path: __dirname + "",
+    filename: "index.min.js"
+  },
+}*/
